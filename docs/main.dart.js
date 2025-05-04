@@ -25509,7 +25509,7 @@ akW:function akW(a){this.a=a},
 akV:function akV(a){this.a=a},
 ZK(a){var s=0,r=A.t(t.H),q,p,o,n,m
 var $async$ZK=A.o(function(b,c){if(b===1)return A.p(c,r)
-while(true)switch(s){case 0:o=A.cA("http://localhost:5032/SongGuessGame/StartGame")
+while(true)switch(s){case 0:o=A.cA("https://songguessgame-bngncwc9fqhpadhb.australiaeast-01.azurewebsites.net/SongGuessGame/StartGame")
 s=3
 return A.k(A.iw(),$async$ZK)
 case 3:n=c
@@ -25526,7 +25526,7 @@ case 1:return A.q(q,r)}})
 return A.r($async$ZK,r)},
 ZH(a){var s=0,r=A.t(t.H),q,p,o,n,m
 var $async$ZH=A.o(function(b,c){if(b===1)return A.p(c,r)
-while(true)switch(s){case 0:o=A.cA("http://localhost:5032/SongGuessGame/Guess")
+while(true)switch(s){case 0:o=A.cA("https://songguessgame-bngncwc9fqhpadhb.australiaeast-01.azurewebsites.net/SongGuessGame/Guess")
 s=3
 return A.k(A.iw(),$async$ZH)
 case 3:n=c
@@ -25543,7 +25543,7 @@ case 1:return A.q(q,r)}})
 return A.r($async$ZH,r)},
 ZG(a){var s=0,r=A.t(t.H),q,p,o,n,m
 var $async$ZG=A.o(function(b,c){if(b===1)return A.p(c,r)
-while(true)switch(s){case 0:o=A.cA("http://localhost:5032/SongGuessGame/EndRound")
+while(true)switch(s){case 0:o=A.cA("https://songguessgame-bngncwc9fqhpadhb.australiaeast-01.azurewebsites.net/SongGuessGame/EndRound")
 s=3
 return A.k(A.iw(),$async$ZG)
 case 3:n=c
@@ -25561,7 +25561,7 @@ return A.r($async$ZG,r)},
 Zx(a){var s=0,r=A.t(t.iw),q,p,o,n,m
 var $async$Zx=A.o(function(b,c){if(b===1)return A.p(c,r)
 while(true)switch(s){case 0:o=t.N
-n=A.cA("http://localhost:5032/SongGuessGame/GetGameRoundGuesses").J5(0,A.a4(["gameRoundId",B.h.k(a)],o,t.z))
+n=A.cA("https://songguessgame-bngncwc9fqhpadhb.australiaeast-01.azurewebsites.net/SongGuessGame/GetGameRoundGuesses").J5(0,A.a4(["gameRoundId",B.h.k(a)],o,t.z))
 s=3
 return A.k(A.iw(),$async$Zx)
 case 3:m=c
@@ -25578,7 +25578,7 @@ case 1:return A.q(q,r)}})
 return A.r($async$Zx,r)},
 ZF(a){var s=0,r=A.t(t.H),q,p,o,n,m
 var $async$ZF=A.o(function(b,c){if(b===1)return A.p(c,r)
-while(true)switch(s){case 0:o=A.cA("http://localhost:5032/SongGuessGame/NextRound")
+while(true)switch(s){case 0:o=A.cA("https://songguessgame-bngncwc9fqhpadhb.australiaeast-01.azurewebsites.net/SongGuessGame/NextRound")
 s=3
 return A.k(A.iw(),$async$ZF)
 case 3:n=c
@@ -25596,7 +25596,7 @@ return A.r($async$ZF,r)},
 rl(a){var s=0,r=A.t(t.nU),q,p,o,n,m
 var $async$rl=A.o(function(b,c){if(b===1)return A.p(c,r)
 while(true)switch(s){case 0:o=t.N
-n=A.cA("http://localhost:5032/SongGuessGame/GetCurrentGameState").J5(0,A.a4(["gameId",B.h.k(a)],o,t.z))
+n=A.cA("https://songguessgame-bngncwc9fqhpadhb.australiaeast-01.azurewebsites.net/SongGuessGame/GetCurrentGameState").J5(0,A.a4(["gameId",B.h.k(a)],o,t.z))
 s=3
 return A.k(A.iw(),$async$rl)
 case 3:m=c
@@ -25613,7 +25613,7 @@ case 1:return A.q(q,r)}})
 return A.r($async$rl,r)},
 Zw(){var s=0,r=A.t(t.RD),q,p,o,n,m
 var $async$Zw=A.o(function(a,b){if(a===1)return A.p(b,r)
-while(true)switch(s){case 0:o=A.cA("http://localhost:5032/SongGuessGame/GetAllNewGames")
+while(true)switch(s){case 0:o=A.cA("https://songguessgame-bngncwc9fqhpadhb.australiaeast-01.azurewebsites.net/SongGuessGame/GetAllNewGames")
 s=3
 return A.k(A.iw(),$async$Zw)
 case 3:n=b
@@ -25632,7 +25632,7 @@ case 1:return A.q(q,r)}})
 return A.r($async$Zw,r)},
 Zy(){var s=0,r=A.t(t.S),q,p,o,n,m
 var $async$Zy=A.o(function(a,b){if(a===1)return A.p(b,r)
-while(true)switch(s){case 0:o=A.cA("http://localhost:5032/SongGuessGame/GetMyLoginId")
+while(true)switch(s){case 0:o=A.cA("https://songguessgame-bngncwc9fqhpadhb.australiaeast-01.azurewebsites.net/SongGuessGame/GetMyLoginId")
 s=3
 return A.k(A.iw(),$async$Zy)
 case 3:n=b
@@ -26823,7 +26823,7 @@ case 4:n=b
 s=5
 return A.k(A.iw(),$async$wR)
 case 5:m=b
-l=A.cA("http://localhost:5032/Auth/RefreshTokens")
+l=A.cA("https://songguessgame-bngncwc9fqhpadhb.australiaeast-01.azurewebsites.net/Auth/RefreshTokens")
 k=t.N
 j=A.y(k,k)
 j.n(0,"Content-Type","application/json")
@@ -26841,7 +26841,7 @@ case 1:return A.q(q,r)}})
 return A.r($async$wR,r)},
 ZC(a,b){var s=0,r=A.t(t.rM),q,p,o,n,m,l
 var $async$ZC=A.o(function(c,d){if(c===1)return A.p(d,r)
-while(true)switch(s){case 0:p=A.cA("http://localhost:5032/Auth/Login")
+while(true)switch(s){case 0:p=A.cA("https://songguessgame-bngncwc9fqhpadhb.australiaeast-01.azurewebsites.net/Auth/Login")
 s=3
 return A.k(A.ZA(),$async$ZC)
 case 3:o=d
@@ -26857,7 +26857,7 @@ case 1:return A.q(q,r)}})
 return A.r($async$ZC,r)},
 aw9(a,b){var s=0,r=A.t(t.H),q,p,o,n,m
 var $async$aw9=A.o(function(c,d){if(c===1)return A.p(d,r)
-while(true)switch(s){case 0:o=A.cA("http://localhost:5032/Auth/Register")
+while(true)switch(s){case 0:o=A.cA("https://songguessgame-bngncwc9fqhpadhb.australiaeast-01.azurewebsites.net/Auth/Register")
 n=t.N
 m=A.a4(["Content-Type","application/json"],n,n)
 n=A.y(n,n)
@@ -86735,7 +86735,7 @@ s=2
 return A.k(A.iw(),$async$lO)
 case 2:n=l.aNq(new k.ai9(d),null)
 m=new A.Lo(null)
-m.at="http://localhost:5032/gamehub"
+m.at="https://songguessgame-bngncwc9fqhpadhb.australiaeast-01.azurewebsites.net/gamehub"
 m.e=n
 m.c=new A.akU(null)
 m.a=B.ci
