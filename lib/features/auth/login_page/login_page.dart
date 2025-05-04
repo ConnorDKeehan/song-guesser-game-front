@@ -149,18 +149,6 @@ class _LoginPageState extends State<LoginPage> {
                             child: const Text(
                                 "Don't have an account? Register here."),
                           ),
-                          TextButton(
-                            onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => const ViewAllNewGamesPage(),
-                                ),
-                              );
-                            },
-                            child: const Text(
-                                "Don't want to sign up? Continue as guest"),
-                          ),
 
                           //Commenting out login with google/apple for now
                           /*const SizedBox(height: 24),
