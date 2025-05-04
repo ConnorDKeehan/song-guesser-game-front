@@ -27,6 +27,7 @@ class _GamePageState extends State<GamePage> {
   bool nextRoundButtonEnabled = true;
   bool amIGameMaster = false;
   bool isMyTurn = false;
+  bool dialogOpen = false;
   List<NewGuessNotification> guesses = [];
   TextEditingController guessController = TextEditingController();
   bool isLoading = true;
@@ -61,11 +62,22 @@ class _GamePageState extends State<GamePage> {
     gameState = await getCurrentGameState(widget.gameId);
 
     //Need to get user who won on the notification
+
+    if(dialogOpen && mounted) maybeCloseDialog(context);
     ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Congrats to user for winning")));
 
     setState(() {
       nextRoundButtonEnabled = true;
     });
+  }
+
+  void maybeCloseDialog(BuildContext context) {
+    try {
+      Navigator.popUntil(context, (route) => !(route is PopupRoute));
+      dialogOpen = false;
+    } catch (_) {
+      // Dialog wasn't open
+    }
   }
 
   void handleNextRoundReceived(List<Object?>? args) async {
@@ -80,7 +92,7 @@ class _GamePageState extends State<GamePage> {
       currentGameRoundId = notification.gameRoundId;
     });
 
-    print('received new round message');
+    print('received new round message ${notification.songUrl}');
 
     await audioPlayer.setUrl(notification.songUrl);
     await audioPlayer.play();
@@ -106,17 +118,19 @@ class _GamePageState extends State<GamePage> {
   }
 
   Future<void> pickWinner(int loginId) async {
+    dialogOpen = false;
     await postEndRound(EndRoundRequest(winnerLoginId: loginId, gameRoundId: currentGameRoundId!));
   }
 
   Future<void> endRound() async {
-    await audioPlayer.pause();
+    await audioPlayer.stop();
     setState(() {
       guessingEnabled = false;
     });
 
     final allGuesses = await getGameRoundGuesses(currentGameRoundId!);
 
+    dialogOpen = true;
     showDialog(
       context: context,
       builder: (BuildContext context) {
@@ -179,10 +193,8 @@ class _GamePageState extends State<GamePage> {
           PlayersSideBar(gameLogins: gameState.gameLogins),
           Expanded(child:
           Column(children: [
-            Expanded(child: Padding(
-              padding: const EdgeInsets.all(9),
-              child: Text("Hello")
-            )),
+            Expanded(child: Image.asset('assets/moon.png')
+            ),
             if(amIGameMaster && nextRoundButtonEnabled)
               TextButton(onPressed: handleNextRoundButton, child: Text("Start Round"))
           ])),

@@ -27,6 +27,7 @@ class AllGuessesAlertDialog extends StatelessWidget {
                   final guess = gameRoundGuessesResponse.guesses[index];
                   return GuessCard(
                     loginId: guess.loginId,
+                    username: guess.username,
                     guessString: guess.guessString,
                     amIGameMaster: amIGameMaster,
                     pickWinner: (id) async {

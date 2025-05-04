@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:songguessgame/features/game_page/widgets/players_side_bar/player_card.dart';
-import 'package:songguessgame/models/entities/game_login.dart';
+import 'package:songguessgame/models/responses/friendly_game_login.dart';
 
 class PlayersSideBar extends StatelessWidget {
   final List<GameLogin> gameLogins;

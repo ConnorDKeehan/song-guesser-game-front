@@ -52,12 +52,9 @@ Future<TokenResponse> loginWithSocial(
 
 Future<void> registerUser(
     {required String username,
-    required String email,
     required String password,
-    required String friendlyName,
     String? metadata}) async {
   final url = Uri.parse('$configApiBaseUrl/Auth/Register');
-  String? currentPushToken = await getPushNotificationToken();
 
   final headers = {
     'Content-Type': 'application/json',
@@ -65,10 +62,7 @@ Future<void> registerUser(
 
   final body = {
     'username': username,
-    'email': email,
     'password': password,
-    'friendlyName': friendlyName,
-    'pushNotificationToken': currentPushToken,
     if (metadata != null) 'metadata': metadata,
   };
 

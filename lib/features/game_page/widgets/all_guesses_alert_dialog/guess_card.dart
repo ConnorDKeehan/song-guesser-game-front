@@ -2,12 +2,13 @@ import 'package:flutter/material.dart';
 
 class GuessCard extends StatelessWidget {
   final int loginId;
+  final String username;
   final String guessString;
   final bool amIGameMaster;
   final Function(int) pickWinner;
 
   const GuessCard({
-    super.key, required this.loginId, required this.guessString, required this.amIGameMaster, required this.pickWinner,
+    super.key, required this.loginId, required this.guessString, required this.amIGameMaster, required this.pickWinner, required this.username,
   });
 
   @override

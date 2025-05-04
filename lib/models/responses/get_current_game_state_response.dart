@@ -1,5 +1,5 @@
 import 'package:songguessgame/models/entities/game.dart';
-import 'package:songguessgame/models/entities/game_login.dart';
+import 'package:songguessgame/models/responses/friendly_game_login.dart';
 import 'package:songguessgame/models/entities/game_round.dart';
 
 class GetCurrentGameStateResponse {

@@ -19,7 +19,7 @@ class _ViewAllNewGamesPageState extends State<ViewAllNewGamesPage> {
   @override
   void initState() {
     getAndSetAllNewGames();
-    signalR.registerHandler('NewGuess', handleNewGameNotification);
+    signalR.registerHandler('GameCreated', handleNewGameNotification);
     super.initState();
   }
 
@@ -42,6 +42,7 @@ class _ViewAllNewGamesPageState extends State<ViewAllNewGamesPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(title: Text("All Games")),
       body: isLoading
           ? Center(child: CircularProgressIndicator())
           : ListView.builder(

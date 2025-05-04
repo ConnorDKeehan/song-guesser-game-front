@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:songguessgame/models/entities/game_login.dart';
+import 'package:songguessgame/models/responses/friendly_game_login.dart';
 
 class PlayerCard extends StatelessWidget {
   final GameLogin gameLogin;
@@ -16,7 +16,7 @@ class PlayerCard extends StatelessWidget {
 
     return Card(
       margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
-      color: colourScheme.secondaryContainer,
+      color: gameLogin.currentTurn ? Colors.purpleAccent : colourScheme.secondaryContainer,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(12),
       ),
@@ -30,9 +30,11 @@ class PlayerCard extends StatelessWidget {
             Row(
               children: [
                 Text(
-                  '${gameLogin.loginIndex} - Points: ${gameLogin.points}',
+                  '${gameLogin.username} - Points: ${gameLogin.points}',
                   style: Theme.of(context).textTheme.titleSmall,
                 ),
+                if(gameLogin.gameMaster)
+                  Icon(Icons.star)
               ],
             )
           ],

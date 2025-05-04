@@ -1,8 +1,9 @@
 import 'package:songguessgame/models/entities/guess.dart';
 import 'package:songguessgame/models/entities/song.dart';
+import 'package:songguessgame/models/responses/friendly_guess.dart';
 
 class GetGameRoundGuessesResponse {
-  final List<Guess> guesses;
+  final List<FriendlyGuess> guesses;
   final Song song;
 
   GetGameRoundGuessesResponse({
@@ -13,7 +14,7 @@ class GetGameRoundGuessesResponse {
   factory GetGameRoundGuessesResponse.fromJson(Map<String, dynamic> json) {
     return GetGameRoundGuessesResponse(
       guesses: (json['guesses'] as List<dynamic>)
-          .map((e) => Guess.fromJson(e as Map<String, dynamic>))
+          .map((e) => FriendlyGuess.fromJson(e as Map<String, dynamic>))
           .toList(),
       song: Song.fromJson(json['song'] as Map<String, dynamic>),
     );

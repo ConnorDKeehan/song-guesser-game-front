@@ -19,7 +19,7 @@ class ChatSideBar extends StatelessWidget {
                 itemCount: guesses.length,
                 itemBuilder: (context, index) {
                   var item = guesses[index];
-                  return Text("Player: ${item.loginId} guessed");
+                  return Text("${item.username} guessed");
                 }
             )
         ),

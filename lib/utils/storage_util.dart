@@ -29,7 +29,7 @@ Future<String?> getRefreshToken() async {
   return refreshToken;
 }
 
-const configApiBaseUrl = 'https://songguessgame-bngncwc9fqhpadhb.australiaeast-01.azurewebsites.net';
+const configApiBaseUrl = "http://localhost:5032";//'https://songguessgame-bngncwc9fqhpadhb.australiaeast-01.azurewebsites.net';
 const configApiSuccessResponses = [200, 201, 204];
 
 

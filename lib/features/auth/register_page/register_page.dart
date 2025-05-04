@@ -12,9 +12,7 @@ class RegisterPage extends StatefulWidget {
 class _RegisterPageState extends State<RegisterPage> {
   final _formKey = GlobalKey<FormState>();
   String _username = '';
-  String _email = '';
   String _password = '';
-  String _friendlyName = '';
   bool _isLoading = false;
   String? _errorMessage;
 
@@ -29,9 +27,7 @@ class _RegisterPageState extends State<RegisterPage> {
         // Call the register function from the API
         await registerUser(
           username: _username,
-          email: _email,
           password: _password,
-          friendlyName: _friendlyName,
         );
 
         setState(() {
@@ -84,16 +80,6 @@ class _RegisterPageState extends State<RegisterPage> {
                 },
               ),
               TextFormField(
-                decoration:
-                    const InputDecoration(labelText: 'Email (Optional)'),
-                keyboardType: TextInputType.emailAddress,
-                onChanged: (value) {
-                  setState(() {
-                    _email = value;
-                  });
-                },
-              ),
-              TextFormField(
                 decoration: const InputDecoration(labelText: 'Password'),
                 obscureText: true,
                 validator: (value) {
@@ -105,20 +91,6 @@ class _RegisterPageState extends State<RegisterPage> {
                 onChanged: (value) {
                   setState(() {
                     _password = value;
-                  });
-                },
-              ),
-              TextFormField(
-                decoration: const InputDecoration(labelText: 'Display Name'),
-                validator: (value) {
-                  if (value == null || value.isEmpty) {
-                    return 'Please enter a display name';
-                  }
-                  return null;
-                },
-                onChanged: (value) {
-                  setState(() {
-                    _friendlyName = value;
                   });
                 },
               ),
